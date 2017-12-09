@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel=stylesheet type="text/css" href="corr_signiff_scatter_anomaly.css">
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="d3.extend.js" charset="utf-8"></script>
+</head>
+<body>
+	<h1>Non-normalized data</h1>
+	<div id="plot">
+		<div id="corrTooltip1" class="tooltip">
+			<p><em>r</em> = <span class="value">0</span></p>
+		</div>
+		<div id="corrTooltip2" class="tooltip">
+			<p><em>r</em> = <span class="value">0</span></p>
+		</div>
+		<div id="scatTooltip" class="tooltip">
+			<p>ID: <span class="value">value</span></p>
+		</div>
+		<div id="instrucs"></div>
+		<label id="showLineLabel"><input type="checkbox" id="showLine" />Show regression line</label>
+	</div>
+	<label id="shuffleCorr">
+		<button disabled="true">Shuffle variable order</button>
+		<p>Disabled for this implementation</p>
+	</label>
+	<button id="shuffleDefault">Restore default</button>
+	<script type="text/javascript" src="options_default.js"></script>
+	<script type="text/javascript" src="options_not_normalized.js"></script>
+	<script type="text/javascript" src="corr_signiff_scatter_anomaly.js"></script>
+</body>
+</html>
