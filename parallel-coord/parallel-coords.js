@@ -4,7 +4,7 @@ function unpack(rows, key) {
   });
 }
 
-var perform = function(coordNames, points, minMax) {
+function perform(coordNames, points, minMax) {
   let trace = {
     type: 'parcoords',
     line: {
