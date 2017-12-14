@@ -56,22 +56,27 @@ function performHorizon(traceNames, labels, points, title) {
     height: 800,
     showlegend: false,
     title: title + '(horizon graph)',
+    font: {size: 20},
     xaxis: {domain: [0, 1]},
     yaxis1: {
       domain: [0, 0.2],
       title: labels[0],
+      titlefont: {size: 15}
     },
     yaxis2: {
       domain: [0.25, 0.45],
       title: labels[1],
+      titlefont: {size: 15}
     },
     yaxis3: {
       domain: [0.5, 0.7],
       title: labels[2],
+      titlefont: {size: 15}
     },
     yaxis4: {
       domain: [0.75, 0.95],
       title: labels[3],
+      titlefont: {size: 15}
     },
   };
   let defaultTrace = {
@@ -171,21 +176,23 @@ function perform(traceNames, labels, points, defaultTrace, layout, divId) {
     data.push(trace);
   });
 
+  layout.xaxis = {domain: [0.05, 0.85]}
   layout.yaxis = {title: 'index'};
   layout.yaxis2 = {
-    title: 'gdp/esa',
+    title: labels[5],
     overlaying: 'y',
     side: 'right',
-    showgrid: false,
-    range: [95.5, 102.2]
+    showgrid: false
   }
   layout.yaxis3 = {
+    title: labels[4],
     overlaying: 'y',
     side: 'right',
     showgrid: false,
     ticks: '',
+    position: 0.93
     // attributes: {x: 1.1, y: 1}
-    range: [95.5, 102.2]
+
   }
   layout.legend = {font: {size: 18}};
   layout.font = {size: 22};
