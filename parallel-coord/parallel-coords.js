@@ -49,6 +49,7 @@ function perform_with(filename, containerId, isGrouped) {
   });
 }
 
+perform_with('iris.json', 'iris-graph', true);
 perform_with('not_normalized.json', 'not-normalized-graph', false);
 perform_with('normalized.json', 'normalized-graph', true);
 
