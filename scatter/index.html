@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Parallel coordinates</title>
+  <meta charset="UTF-8">
+  <title>Scatter based</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" charset="utf-8"></script>
   <style type="text/css">
-    .container{
+    .container {
       height: 100vh;
     }
   </style>
 </head>
 <body>
-  <div id="barGraphDiv" class="container"></div>
-  <div id="overlaidGraphDiv" class="container"></div>
-  <div id="horizonGraphs" class="container"></div>
-  <script src="scatter-charts.js"></script>
+  <div class="header-container">
+    <a href="/index.html" class="header">
+      <div class="left">
+        <span class="text">EGOR</span>
+        <span class="bracket"> {</span>
+      </div>
+      <div class="middle">scatter based graphics</div>
+      <div class="right">
+        <span class="bracket">} </span>
+        <span class="text">ЯOD<div class="rotate">E</div></span>
+      </div>
+    </a>
+  </div>
+  <div class="main scatter">
+    <div id="barGraphDiv" class="container"></div>
+    <div id="overlaidGraphDiv" class="container"></div>
+    <div id="horizonGraphs" class="container"></div>
+    <script src="scatter-charts.js"></script>
+  </div>
 </body>
 </html>

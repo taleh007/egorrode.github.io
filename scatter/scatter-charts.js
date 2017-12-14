@@ -128,7 +128,8 @@ function performHorizon(traceNames, labels, points, title) {
 function performBar(traceNames, labels, points, title) {
   let layout = {
     barmode: 'relative',
-    title: title + '(stacked bar graph)'
+    title: title + '(stacked bar graph)',
+    // width: '1400px'
   };
   let defaultTrace = {
     type: 'bar'
@@ -140,7 +141,8 @@ function performBar(traceNames, labels, points, title) {
 
 function performOverlaid(traceNames, labels, points, title) {
   let layout = {
-    title: title + '(overlaid graph)'
+    title: title + '(overlaid graph)',
+    // width: '1400px'
   };
   let defaultTrace = {
     type: 'scatter',
