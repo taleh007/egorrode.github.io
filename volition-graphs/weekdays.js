@@ -6,32 +6,32 @@ function select_unpack(rows, select_key, select_value, unpack_key) {
   return rows.filter(row => row[select_key] == select_value).map(row => row[unpack_key]);
 };
 
-Plotly.d3.csv('weekdays-orders.csv', function(err, rows){
+Plotly.d3.csv('weekdays-orders.csv', function(err, rows) {
   var data = [
     {
       y: unpack(rows, 'count'),
       x: unpack(rows, 'weekday_name'),
       type: "scatter",
-      name: "count",
+      name: "количество",
     },
     {
       y: unpack(rows, 'amount'),
       x: unpack(rows, 'weekday_name'),
       yaxis: 'y2',
       type: "scatter",
-      name: "amount",
+      name: "сумма",
     }
   ];
   
   var layout = {
-    title: 'Orders by weekdays',
+    title: 'Заказы по дням недели',
     width: 1000,
     yaxis: {
-      title: 'count',
+      title: 'количество',
       domain: [1000, 1400]
     },
     yaxis2: {
-      title: 'amount',
+      title: 'сумма',
       side: 'right',
       overlaying: 'y',
       domain: ''
@@ -40,8 +40,7 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows){
   
   Plotly.newPlot('weekdays-orders', data, layout);
   
-  Plotly.d3.csv('weekdays-orders-hours.csv', function(err, hours_rows){
-    
+  Plotly.d3.csv('weekdays-orders-hours.csv', function(err, hours_rows) {
     var weekdays = unpack(rows, 'weekday_name');
     
     function perform_for_weekdays(div_id, column) {
@@ -65,7 +64,5 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows){
 
     perform_for_weekdays('weekdays-orders-hours-count', 'count');
     perform_for_weekdays('weekdays-orders-hours-amount', 'amount');
-  
-  
   });
 });
