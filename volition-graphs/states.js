@@ -42,7 +42,7 @@ var perform_by_states = function (filename, z_column, zmax, title, divId) {
   })
 };
 
-perform_by_states('orders.csv', 'amount', 130000, 'Order total, US $', 'heat-map-total')
+perform_by_states('orders.csv', 'amount', 130000, 'Общая сумма заказов, US $', 'heat-map-total')
 perform_by_states('unpopular-orders.csv', 'amount', 35000, 'Order total in unpopular states, US $', 'heat-map-total-unpopular')
 perform_by_states('orders.csv', 'count', 1600, 'Order count', 'heat-map-count')
 perform_by_states('unpopular-orders.csv', 'count', 500, 'Order count in unpopular states', 'heat-map-count-unpopular')
