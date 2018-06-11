@@ -55,14 +55,14 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows) {
       });
 
       layout = {
-        title: 'Orders ' + column + ' per hour for each weekday',
+        title: column + ' заказов в час для каждого дня недели',
         width: 1000,
       }
 
       Plotly.newPlot(div_id, traces, layout);
     };
 
-    perform_for_weekdays('weekdays-orders-hours-count', 'count');
-    perform_for_weekdays('weekdays-orders-hours-amount', 'amount');
+    perform_for_weekdays('weekdays-orders-hours-count', 'Количество');
+    perform_for_weekdays('weekdays-orders-hours-amount', 'Сумма');
   });
 });
