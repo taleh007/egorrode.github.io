@@ -55,7 +55,7 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows) {
       });
 
       layout = {
-        title: column + ' заказов в час для каждого дня недели',
+        title: label + ' заказов в час для каждого дня недели',
         width: 1000,
       }
 
