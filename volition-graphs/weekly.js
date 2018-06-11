@@ -13,7 +13,7 @@ Plotly.d3.csv('weekly_data.csv', function(err, rows){
       y: unpack(rows, 'week_promotions_count'),
       x: unpack(rows, 'date'),
       type: "scatter",
-      name: "с использованием промоакций",
+      name: "с промокодами",
       yaxis: "y2",
     }
   ];
@@ -26,7 +26,7 @@ Plotly.d3.csv('weekly_data.csv', function(err, rows){
       title: 'количество'
     },
     yaxis2: {
-      title: 'с использованием промоакций',
+      title: 'с промокодами',
       overlaying: 'y',
       side: 'right',
       showgrid: false,
