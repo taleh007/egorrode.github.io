@@ -43,7 +43,7 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows) {
   Plotly.d3.csv('weekdays-orders-hours.csv', function(err, hours_rows) {
     var weekdays = unpack(rows, 'weekday_name');
     
-    function perform_for_weekdays(div_id, column) {
+    function perform_for_weekdays(div_id, column, label) {
       traces = [];
       weekdays.forEach(weekday => {
         traces.push({
@@ -62,7 +62,7 @@ Plotly.d3.csv('weekdays-orders.csv', function(err, rows) {
       Plotly.newPlot(div_id, traces, layout);
     };
 
-    perform_for_weekdays('weekdays-orders-hours-count', 'Количество');
-    perform_for_weekdays('weekdays-orders-hours-amount', 'Сумма');
+    perform_for_weekdays('weekdays-orders-hours-count', 'count', 'Количество');
+    perform_for_weekdays('weekdays-orders-hours-amount', 'amount', 'Сумма');
   });
 });
